@@ -22,9 +22,8 @@ app.use(cors())
 app.use('/api', caseRoutes)
 
 const PORT = process.env.PORT
-app.listen(PORT, (err) =>{
-    console.log('listening at ' + PORT);
-    
+app.listen(PORT, (req, res) =>{
+    res.send("<h1>Hpow are you doing ? </h1>")
 })
 
 mongoose.connect(process.env.MONGO_URI)
