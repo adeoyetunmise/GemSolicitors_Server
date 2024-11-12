@@ -23,9 +23,12 @@ app.use('/api', caseRoutes)
 
 const PORT = process.env.PORT
 app.listen(PORT, (req, res) =>{
-    res.send("<h1>Hpow are you doing ? </h1>")
+    console.log('listening at ' + PORT);
+    
 })
-
+app.get("/tena", (req, res) => {
+    res.send("<h1> Tena </h1>");
+})
 mongoose.connect(process.env.MONGO_URI)
 .then(() =>{
     console.log('connected to database');
